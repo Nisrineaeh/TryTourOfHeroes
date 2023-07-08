@@ -1,0 +1,15 @@
+
+<h2>My Heroes</h2>
+
+
+<div *ngFor="let hero of heroes">
+
+    <h3>
+        <a [title]="'Détails du '+ hero.name" [routerLink]="['/heros', hero.id]">{{hero.name}}</a>
+    </h3>
+
+    <button *ngIf="hero.id">{{hero.id}}</button>
+    <button *ngIf="hero.name">{{hero.name}}</button>
+ 
+
+</div>
