@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<ul>
+    <p *ngFor="let hero of heroes; let i = index">
+        <ng-container *ngIf="i < 4">
+            {{ hero.name }}
+        </ng-container>
+    </p>
+</ul>
