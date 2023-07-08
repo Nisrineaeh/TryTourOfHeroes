@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Heroes } from '../hero';
+import { Hero } from '../hero';
 
 
 @Component({
@@ -10,4 +11,10 @@ import { Heroes } from '../hero';
 export class DashboardComponent {
   title="Top Heroes";
   heroes = [...Heroes];
+
+  selectedHero: Hero | null = null;
+
+  selectHero(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }

@@ -1,7 +1,14 @@
 <h2>{{title}}</h2>
 
     <p id="dbtn" *ngFor="let hero of heroes; let i = index">
-        <button *ngIf="i < 4">
+        <button [routerLink]="['/details']" *ngIf="i < 4">
             {{ hero.name }}
         </button>
     </p>
+
+    <div *ngIf="selectedHero">
+        <h3>{{selectedHero.name}} Details</h3>
+        <p>id : {{selectedHero.id}}</p>
+        <p>Hero name : {{ selectedHero.name }}</p>
+
+    </div>
