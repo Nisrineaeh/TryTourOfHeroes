@@ -1,8 +1,7 @@
-<h1>{{title}}</h1>
-<ul>
-    <p *ngFor="let hero of heroes; let i = index">
-        <ng-container *ngIf="i < 4">
+<h2>{{title}}</h2>
+
+    <p id="dbtn" *ngFor="let hero of heroes; let i = index">
+        <button *ngIf="i < 4">
             {{ hero.name }}
-        </ng-container>
+        </button>
     </p>
-</ul>

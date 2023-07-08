@@ -1,20 +1,27 @@
-/* Application-wide Styles */
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+.btn1{
+  background-color:#3f525c ;
+  color:white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px ;
+  padding: 10px;
 }
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+
+.btn2{
+  background-color:#eeeeee;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px ;
+  border-color: #eeeeee;
+  width: 250px;
+  text-align: left;
 }
-body {
-  margin: 2em;
+a{
+  text-decoration: none;
+
 }
-body, input[type="text"], button {
-  color: #333;
-  font-family: Cambria, Georgia, serif;
+#hehe{
+  display: flex;
+  justify-content: center;
+  
 }
 button {
   background-color: #eee;
@@ -23,11 +30,30 @@ button {
   cursor: pointer;
   color: black;
   font-size: 1.2rem;
-  padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  padding: 10px;
+
 }
+h2 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+/*Application-wide Styles
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+body {
+  margin: 2em;
+}
+body, input[type="text"], button {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
+
 button:hover {
   background-color: black;
   color: white;
