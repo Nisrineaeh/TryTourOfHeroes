@@ -1,10 +1,24 @@
 
-    <div *ngIf="selectedHero">
-        <h3>{{selectedHero.name}} Details</h3>
-        <p>id : {{selectedHero.id}}</p>
-        <p>Hero name : {{ selectedHero.name }}</p>
-    
-    </div>
+<div *ngIf="selectedHero">
+    <h3>Détails du héros</h3>
+    <p>Nom : {{ selectedHero.name }}</p>
+    <p>ID : {{ selectedHero.id }}</p>
+    <!-- Ajoutez d'autres détails du héros ici -->
+</div>
 
+
+<h2>Rechercher un héros</h2>
+<form (ngSubmit)="searchHero()">
+    <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Entrez le nom du héros" class="inputbtn">
+    <button type="submit">Rechercher</button>
+</form>
+
+
+<div *ngIf="searchResult">
+    <h3>{{searchResult.name | uppercase}} Details</h3>
+    <p>id : {{ searchResult.id }}</p>
+    <p>Hero name : {{ searchResult.name }}</p>
+    
+</div>
 
 <button [routerLink]="['/dashboard']" id="bb">Back</button>

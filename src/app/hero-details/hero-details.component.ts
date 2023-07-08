@@ -15,6 +15,22 @@ export class HeroDetailsComponent {
   selectHero(hero: Hero): void {
     this.selectedHero = hero;
   }
+
+  searchQuery: string = "";
+  searchResult: Hero | null = null;
+
+  searchHero(): void {
+    if (this.searchQuery) {
+      const foundHero = this.heroes.find(hero => hero.name === this.searchQuery);
+      if (foundHero) {
+        this.searchResult = foundHero;
+      } else {
+        this.searchResult = null;
+      }
+    } else {
+      this.searchResult = null;
+    }
+  }
 }
 
 
